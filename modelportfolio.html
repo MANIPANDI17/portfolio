@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manipandi - Web Developer</title>
+  <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"/>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    header {
+      background: #69b7ff;
+      color: rgb(252, 252, 252);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 50px 30px;
+      background: #fff;
+    }
+
+    .hero-left {
+      max-width: 500px;
+    }
+
+    .hero-left h1 {
+      font-size: 40px;
+      margin: 10px 0;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      color: #333;
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-bottom: 18px;
+    }
+
+    .hero-right img {
+    max-width: 250px;
+    border-radius: 48%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 4px solid #edeef3;
+    margin-left: 17rem;
+    height: 300px;
+    object-fit: cover;
+    object-position: -25px;
+    }
+
+    .developer-label {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    .project {
+  background: #f9f9f9;
+  border-left: 5px solid #3498db;
+  padding: 15px;
+  margin: 15px 0;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+
+    section.content-section {
+      display: none;
+      padding: 40px 30px;
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      margin-top: 20px;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      background: #333;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    /* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 28px;
+  }
+
+  .hero-right img {
+    width: 180px;
+    margin: 20px 0 0 0;
+  }
+
+  .btn {
+    padding: 10px 16px;
+  }
+
+  .project {
+    padding: 10px;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .hero-right img {
+    margin-left: 0;
+    width: 200px;
+  }
+}
+
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Portfolio.</div>
+    <nav>
+        <ul>
+          <li><a href="#" onclick="showSection('home')">Home</a></li>
+          <li><a href="#" onclick="showSection('about')">About</a></li>
+          <li><a href="#" onclick="showSection('skills')">Skills</a></li>
+          <li><a href="#" onclick="showSection('projects')">Projects</a></li> 
+          <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+      
+  </header>
+
+  
+  <section id="home" class="hero content-section active">
+    <div class="hero-left">
+      <h3>Hello, I am</h3>
+      <h1>Manipandi</h1>
+      <p>A passionate MERN Stack Developer crafting modern web applications.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+      <a href="./picture/manpandi .resume.pdf" class="btn" download>Download CV</a>
+    </div>
+    <div class="hero-right">
+      <img src="./picture/manipandi.jpg" alt="Manipandi">
+      <span class="developer-label">  MERN Stack Developer</span>
+    </div>
+  </section>
+
+  <section id="about" class="content-section">
+    <h2>About Me</h2>
+    <p>To obtain a challenging position as a MERN Stack Developer where I can apply my 
+knowledge of MongoDB, Express.js, React, and Node.js, along with skills in HTML, CSS, 
+JavaScript, and responsive design. I aim to contribute to dynamic web applications, 
+collaborate on innovative projects, and continue growing as a full-stack developer in a 
+fast-paced, tech-driven environment.</p>
+  </section>
+
+
+  <section id="skills" class="content-section">
+    <h2>My Skills</h2>
+    <ul>
+      <li>✅ HTML5, CSS3, Flexbox, Grid</li>
+      <li>✅ JavaScript ES6+</li>
+      <li>✅ React.js </li>
+      <li>✅ Node.js </li>
+      <li>✅ Express.js</li>
+      <li>✅ MongoDB </li>
+      <li>✅ Bootstrap</li>
+      <li>✅ SQL</li>
+      <li>✅ Git & GitHub</li>
+      
+    </ul>
+  </section>
+  <section id="projects" class="content-section">
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A personal portfolio website built with HTML, CSS, and JavaScript to showcase my work and skills.</p>
+    </div>
+    <div class="project">
+      <h3>To-Do App</h3>
+      <p>A simple to-do list application using vanilla JS, with add/delete/save functionality using localStorage.</p>
+    </div>
+    <div class="project">
+      <h3>Landing-page</h3>
+      <p>Responsive design expertise, ensuring cross-device compatibility for desktops, tablets, and mobile phones.
+</p>
+    </div>
+       <div class="project">
+      <h3>Travel page E- Commerce </h3>
+      <p> Familiar with component-based architecture using frameworks like React.js for building scalable and 
+maintainable user interfaces.
+
+</p>
+    </div>
+  </section>
+
+  <section id="contact" class="content-section">
+    <h2>Contact Me</h2>
+    <strong>🏢 Address : </strong><address><p>120H/7 Arumugam North Street Thirumangalam Madurai-625706</p></address>
+    <p><strong>📧 Email : </strong> manipandichinnapandi@gmail.com</p>
+    <p><strong>📱  Phone : </strong> +91 76049 90074</p>
+    <p>🌐 LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p><strong>📍 Location:</strong> Thirumangalam Madurai-625706 ,Tamil Nadu, India</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Manipandi | All rights reserved
+  </footer>
+  
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.content-section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+
+    console.log('Portfolio loaded!');
+  </script>
+
+</body>
+</html>
+
+
+
+<!-- 
+new code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f0f0;
+      color: #333;
+    }
+
+    header {
+      background: #2c3e50;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: white;
+      padding: 15px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    nav button:hover {
+      background-color: #2c3e50;
+    }
+
+    section {
+      display: none;
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+    }
+
+    .project {
+      background: #fff;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-left: 5px solid #3498db;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #2c3e50;
+      text-align: center;
+      padding: 15px;
+      color: white;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Web Developer | Designer | Learner</p>
+  </header>
+
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </nav>
+
+  <section id="home" class="active">
+    <h2>Welcome</h2>
+    <p>Hello! I'm a passionate web developer. Welcome to my portfolio website.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a self-motivated and detail-oriented web developer learning modern technologies like HTML, CSS, JavaScript, and React. I enjoy solving problems and building beautiful websites.</p>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>✅ HTML5, CSS3, Flexbox, Grid</li>
+      <li>✅ JavaScript ES6+</li>
+      <li>✅ Responsive Design</li>
+      <li>✅ React (Beginner)</li>
+      <li>✅ Git & GitHub</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Portfolio Website</h3>
+      <p>A personal responsive website using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div class="project">
+      <h3>Weather App</h3>
+      <p>Weather checking app using OpenWeather API and vanilla JS.</p>
+    </div>
+    <div class="project">
+      <h3>To-Do List</h3>
+      <p>A simple to-do list with add, delete, and filter functionality using localStorage.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>📧 Email: yourname@example.com</p>
+    <p>📱 Phone: +91 12345 67890</p>
+    <p>🌐 LinkedIn: <a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+    <p>🌐 GitHub: <a href="#" target="_blank">github.com/yourusername</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Your Name | All Rights Reserved
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+  </script>
+
+</body>
+</html> -->
